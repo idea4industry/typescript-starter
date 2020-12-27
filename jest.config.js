@@ -32,12 +32,13 @@ module.exports = {
   // coverageProvider: 'v8',
 
   // A list of reporter names that Jest uses when writing coverage reports
-  // coverageReporters: [
-  //   "json",
-  //   "text",
-  //   "lcov",
-  //   "clover"
-  // ],
+  coverageReporters: [
+    // "json",
+    ["text-summary"],
+    ["text", { skipFull: true }],
+    // "lcov",
+    // "clover"
+  ],
 
   // An object that configures minimum threshold enforcement for coverage results
   coverageThreshold: {
@@ -111,7 +112,11 @@ module.exports = {
   // projects: undefined,
 
   // Use this configuration option to add custom reporters to Jest
-  reporters: ['default'],
+  reporters: [
+    // 'default',
+    // 'jest-spec-reporter',
+    'jest-simple-dot-reporter'
+  ],
 
   // Automatically reset mock state between every test
   // resetMocks: false,
@@ -194,7 +199,7 @@ module.exports = {
   // unmockedModulePathPatterns: undefined,
 
   // Indicates whether each individual test should be reported during the run
-  // verbose: undefined,
+  verbose: true,
 
   // An array of regexp patterns that are matched against all source file paths before re-running tests in watch mode
   // watchPathIgnorePatterns: ['temp/'],
