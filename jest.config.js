@@ -118,7 +118,7 @@ module.exports = {
     // 'default',
     // 'jest-spec-reporter',
     // 'jest-simple-dot-reporter',
-    './__tests__/helpers/jest-reporter.js',
+    './__tests__/helpers/reporter.js',
   ],
 
   // Automatically reset mock state between every test
