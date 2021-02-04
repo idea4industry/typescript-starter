@@ -34,8 +34,10 @@ module.exports = {
   // A list of reporter names that Jest uses when writing coverage reports
   coverageReporters: [
     // "json",
-    ["text-summary"],
-    ["text", { skipFull: true }],
+    // ["text-summary"],
+    ["text",
+      // { skipFull: true }
+    ],
     // "lcov",
     // "clover"
   ],
@@ -115,7 +117,8 @@ module.exports = {
   reporters: [
     // 'default',
     // 'jest-spec-reporter',
-    'jest-simple-dot-reporter'
+    // 'jest-simple-dot-reporter',
+    './__tests__/helpers/jest-reporter.js',
   ],
 
   // Automatically reset mock state between every test

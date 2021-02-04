@@ -21,7 +21,7 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: 'module',
-    project: './__tests__/tsconfig.json',
+    project: './tsconfigs/test/tsconfig.json',
   },
   rules: {
     '@typescript-eslint/interface-name-prefix': 'off', //["error", { "prefixWithI": "always" }]
@@ -33,5 +33,7 @@ module.exports = {
     'import/named': 'off',
     'require-await': 'error',
     'import/prefer-default-export': 'off',
+    // "comma-dangle": ["error", "never"]
+    // 'max-len': ['error', { code: 80 }]
   }
 }
