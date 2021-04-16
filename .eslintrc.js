@@ -21,7 +21,7 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: 'module',
-    project: './tsconfigs/test/tsconfig.json',
+    project: './__dev__/tsconfig.json',
   },
   rules: {
     '@typescript-eslint/interface-name-prefix': 'off', //["error", { "prefixWithI": "always" }]
