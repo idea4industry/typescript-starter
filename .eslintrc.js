@@ -4,14 +4,21 @@ module.exports = {
     node: true,
     jest: true,
   },
-  plugins: ['@typescript-eslint', 'prettier', 'only-warn'],
+  plugins: [
+    '@typescript-eslint',
+    'prettier',
+    'only-warn',
+    'sonarjs',
+    'jest', "json"
+  ],
   extends: [
     // 'eslint:recommended',
     'airbnb-typescript/base',
-    // 'plugin:@typescript-eslint/eslint-recommended',
-    // 'plugin:@typescript-eslint/recommended',
+    "plugin:json/recommended",
+    "plugin:sonarjs/recommended",
     'prettier/@typescript-eslint',
     'plugin:prettier/recommended',
+    "plugin:jest/recommended"
   ],
   parser: '@typescript-eslint/parser',
   globals: {
@@ -33,7 +40,10 @@ module.exports = {
     'import/named': 'off',
     'require-await': 'error',
     'import/prefer-default-export': 'off',
+    "complexity": ["error", 10],
+    "no-void": "off",
+    // "no-multiple-empty-lines": [2, { "max": 0, "maxEOF": 0 }]
     // "comma-dangle": ["error", "never"]
-    // 'max-len': ['error', { code: 80 }]
+    'max-len': ['error', { code: 300 }],
   }
 }
