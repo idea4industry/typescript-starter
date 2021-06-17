@@ -34,10 +34,15 @@ module.exports = {
   // A list of reporter names that Jest uses when writing coverage reports
   coverageReporters: [
     // "json",
-    // ["text-summary"],
     ["text",
-      // { skipFull: true }
+      {
+        skipFull: true,
+        // maxCols: 
+        // skipEmpty: true
+      }
     ],
+    // ["text-summary"],
+    // "jest-dashboard"
     // "lcov",
     // "clover"
   ],
@@ -108,17 +113,16 @@ module.exports = {
   // notifyMode: "failure-change",
 
   // A preset that is used as a base for Jest's configuration
-  // preset: "@shelf/jest-mongodb",
+  preset: "@shelf/jest-mongodb",
 
   // Run tests from one or more projects
   // projects: undefined,
 
   // Use this configuration option to add custom reporters to Jest
   reporters: [
-    // 'default',
-    // 'jest-spec-reporter',
-    // 'jest-simple-dot-reporter',
-    './__tests__/helpers/reporter.js',
+    // 'default'
+    // 'jest-simple-dot-reporter'
+    './__tests__/helpers/jest-reporter.js',
   ],
 
   // Automatically reset mock state between every test
@@ -170,9 +174,9 @@ module.exports = {
   ],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
-  // testPathIgnorePatterns: [
-  //   "/node_modules/"
-  // ],
+  testPathIgnorePatterns: [
+    "/node_modules/",
+  ],
 
   // The regexp pattern or array of patterns that Jest uses to detect test files
   // testRegex: [],
